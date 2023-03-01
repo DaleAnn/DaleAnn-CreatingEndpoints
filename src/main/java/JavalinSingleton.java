@@ -17,8 +17,15 @@ public class JavalinSingleton {
     public static Javalin getInstance(){
         Javalin app = Javalin.create();
         
-        //write endpoint here
+        //write endpoint here 
 
+    
+    app.get("/hello", ctx -> { 
+        //logic to be executed when this endpoint is hit
+        ctx.result("Hello World");
+      
+    });
+          
         return app;
     }
     
